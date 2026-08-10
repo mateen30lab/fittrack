@@ -1,0 +1,590 @@
+/* =========================================================
+   PREMIUM ANALYTICS
+   ========================================================= */
+
+.analytics-page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    color: #fff;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.analytics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.analytics-header h2 {
+    margin: 0 0 6px;
+    font-size: 30px;
+    color: #fff;
+}
+
+.analytics-header p {
+    margin: 0;
+    color: #8e9bb3;
+    font-size: 14px;
+}
+
+.premium-pill {
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #8a5cff, #00d4ff);
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 0 30px rgba(0, 212, 255, .25);
+}
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.stat-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+    padding: 26px;
+    background: linear-gradient(145deg, #131d31, #1d2a46);
+    border: 1px solid rgba(255, 255, 255, .06);
+    transition: .35s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .35);
+}
+
+.stat-card::before {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    right: -80px;
+    top: -80px;
+    background: radial-gradient(
+        circle,
+        rgba(0, 212, 255, .35),
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+.stat-card small {
+    color: #97a8c5;
+    font-size: 14px;
+}
+
+.stat-card h2 {
+    position: relative;
+    margin: 18px 0;
+    color: #00f5ff;
+    font-size: 42px;
+    line-height: 1;
+}
+
+.stat-card span {
+    color: #67ffb0;
+    font-size: 13px;
+}
+
+/* =========================================================
+   CHARTS
+   ========================================================= */
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.chart-card {
+    position: relative;
+    min-height: 390px;
+    padding: 25px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, #18243d, #111a2c);
+    border: 1px solid rgba(255, 255, 255, .05);
+    transition: .35s ease;
+}
+
+.chart-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .30);
+}
+
+.chart-card h3 {
+    margin: 0 0 20px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.chart-card canvas {
+    display: block;
+    width: 100% !important;
+    height: 300px !important;
+}
+
+/* =========================================================
+   BOTTOM
+   ========================================================= */
+
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+.insight-card {
+    padding: 30px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, #1c2442, #182033);
+    border: 1px solid rgba(255, 255, 255, .05);
+}
+
+.insight-card h2 {
+    margin-top: 0;
+    color: #00f5ff;
+}
+
+.insight-card p {
+    color: #b8c3d9;
+    line-height: 1.8;
+}
+
+.insight-card strong {
+    color: #fff;
+}
+
+/* =========================================================
+   AI BUTTON
+   ========================================================= */
+
+.ai-btn {
+    padding: 14px 25px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #00d4ff, #7b61ff);
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.ai-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 212, 255, .4);
+}
+
+/* =========================================================
+   FITNESS SCORE
+   ========================================================= */
+
+.fitness-ring-card {
+    padding: 30px;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #18243d, #111a2c);
+    text-align: center;
+}
+
+.fitness-ring-card h3 {
+    margin-top: 0;
+}
+
+.fitness-circle {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 20px auto 0;
+}
+
+.fitness-circle svg {
+    width: 180px;
+    height: 180px;
+    transform: rotate(-90deg);
+}
+
+.fitness-circle circle {
+    fill: none;
+    stroke-width: 12;
+}
+
+.fitness-circle .bg {
+    stroke: #2b3d5a;
+}
+
+.fitness-circle .progress {
+    stroke: #00f5ff;
+    stroke-linecap: round;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    transition: stroke-dashoffset 2s ease;
+    filter: drop-shadow(0 0 8px #00f5ff);
+}
+
+.score-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 38px;
+    font-weight: 800;
+}
+
+/* =========================================================
+   AI MODAL
+   ========================================================= */
+
+.ai-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, .75);
+    backdrop-filter: blur(8px);
+    z-index: 9999;
+}
+
+.ai-modal-content {
+    width: 800px;
+    max-width: 92%;
+    padding: 35px;
+    border-radius: 25px;
+    background: #141b2d;
+    color: #fff;
+    border: 1px solid rgba(0, 212, 255, .15);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, .5);
+    animation: popup .4s ease;
+}
+
+.ai-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.ai-top h2 {
+    margin: 0;
+}
+
+.ai-top button {
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* =========================================================
+   LOADER
+   ========================================================= */
+
+.typing-loader {
+    display: flex;
+    gap: 8px;
+}
+
+.typing-loader span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #00d4ff;
+    animation: bounce 1s infinite;
+}
+
+.typing-loader span:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.typing-loader span:nth-child(3) {
+    animation-delay: .4s;
+}
+
+/* =========================================================
+   ACHIEVEMENTS
+   ========================================================= */
+
+.achievement-section {
+    margin-top: 15px;
+}
+
+.achievement-section h2 {
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.achievement-card {
+    padding: 25px;
+    border-radius: 20px;
+    background: #18243d;
+    text-align: center;
+    opacity: .45;
+    border: 1px solid rgba(255, 255, 255, .05);
+    transition: .4s ease;
+}
+
+.achievement-card.unlocked {
+    opacity: 1;
+    border-color: #00f5ff;
+    box-shadow: 0 0 25px rgba(0, 245, 255, .20);
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px);
+}
+
+.achievement-card .icon {
+    margin-bottom: 18px;
+    font-size: 45px;
+}
+
+.achievement-card h4 {
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.achievement-card p {
+    margin: 0;
+    color: #9fb2d4;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   RISK PREDICTOR
+   ========================================================= */
+
+.risk-card {
+    padding: 35px;
+    border-radius: 24px;
+    background: linear-gradient(145deg, #131d31, #1b2845);
+    border: 1px solid rgba(255, 255, 255, .05);
+}
+
+.risk-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.risk-header h2 {
+    margin: 0;
+}
+
+.live-badge {
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #00ff9d;
+    color: #111;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.risk-meter {
+    height: 18px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #26344f;
+}
+
+.risk-fill {
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #00ff9d, #00d4ff);
+    transition: width 2s ease;
+    box-shadow: 0 0 15px rgba(0, 212, 255, .4);
+}
+
+.risk-percent {
+    margin-bottom: 20px;
+    color: #00f5ff;
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.risk-report h3 {
+    color: #fff;
+}
+
+.risk-report ul {
+    padding-left: 20px;
+    color: #cdd8ef;
+    line-height: 2;
+}
+
+/* =========================================================
+   LEADERBOARD
+   ========================================================= */
+
+.leaderboard-section {
+    margin-top: 15px;
+}
+
+.leaderboard-section > h2 {
+    margin-bottom: 20px;
+}
+
+.leaderboard-card {
+    padding: 25px;
+    border-radius: 22px;
+    background: #18243d;
+}
+
+.leader-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 16px;
+    background: #202d49;
+    transition: .35s ease;
+}
+
+.leader-row:last-child {
+    margin-bottom: 0;
+}
+
+.leader-row:hover {
+    transform: translateX(8px);
+    background: #243553;
+}
+
+.leader-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 17px;
+}
+
+.badge {
+    min-width: 30px;
+    font-size: 26px;
+}
+
+.premium-mini {
+    padding: 3px 10px;
+    margin-left: 5px;
+    border-radius: 20px;
+    background: #ffd700;
+    color: #111;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes bounce {
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes popup {
+    from {
+        transform: scale(.85);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .analytics-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-card {
+        min-height: 340px;
+    }
+
+    .chart-card canvas {
+        height: 260px !important;
+    }
+
+    .risk-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .leader-row {
+        padding: 14px;
+    }
+
+    .leader-left {
+        gap: 9px;
+        font-size: 14px;
+    }
+
+    .premium-pill {
+        font-size: 13px;
+    }
+}
+.achievement-section {
+    margin-bottom: 40px;
+}
