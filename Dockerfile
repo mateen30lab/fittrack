@@ -23,7 +23,7 @@ RUN npm install && npm run build
 
 RUN chown -R www-data:www-data storage bootstrap/cache
 
-RUN a2enmod rewrite
+RUN a2dismod npm_event npm_worker npm_perfork || true \ && a2enmod npm_perfork rewrite
 
 COPY docker/apache.conf /etc/apache2/sites-available/000-default.conf
 
