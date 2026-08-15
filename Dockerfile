@@ -24,6 +24,8 @@ RUN npm install && npm run build
 RUN chown -R www-data:www-data storage bootstrap/cache
 
 RUN a2dismod mpm_event mpm_worker mpm_prefork || true \
+    && rm -f /etc/apache2/mods-enabled/mpm_*.load \
+    && rm -f /etc/apache2/mods-enabled/mpm_*.conf \
     && a2enmod mpm_prefork rewrite
 
 COPY docker/apache.conf /etc/apache2/sites-available/000-default.conf
